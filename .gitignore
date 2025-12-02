@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+
+# Mac
+.DS_Store
+
+# Large data files (optional - uncomment if you want to ignore)
+# *.csv
+# *.xlsx
