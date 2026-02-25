@@ -1,0 +1,12 @@
+# Ignore the virtual environment
+venv/
+
+# Ignore Mac system clutter
+.DS_Store
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+
+# Ignore notebook checkpoints
+.ipynb_checkpoints/
