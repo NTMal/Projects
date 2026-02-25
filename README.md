@@ -1,3 +1,3 @@
 # Projects
-Repo for Python projects from IBM Data Science Professional Certificate course
+Repo for Python projects
 
