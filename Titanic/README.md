@@ -8,7 +8,7 @@
 * **Model Performance Note:** The model was fine-tuned for high **Precision (0.84)** in survival predictions, meaning it is highly reliable when it predicts a passenger lived.
 
 ### Project Structure:
-- "/data": Kaggle csv files
+- "/data": Kaggle csv files. Data source [Kaggle Titanic - Machine Learning from Disaster](https://www.kaggle.com/c/titanic/data)
 - "/notebooks": end-to-end model pipeline (data cleaning, EDA, Hyperparameter Tuning using GridSearchCV)
 
 
