@@ -15,3 +15,5 @@ env/
 *.csv
 *.xlsx
 
+.vscode/
+IBM_DataScience/Simple_Linear_Regression.ipynb
