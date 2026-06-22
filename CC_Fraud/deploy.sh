@@ -21,7 +21,7 @@
 # ── CONFIGURATION ─────────────────────────────────────────────────────────────
 # Edit these variables before running
 
-PROJECT_ID="your-gcp-project-id"        # Find this in GCP Console → top of page
+PROJECT_ID="project-a56e7608-d174-4fc4-b52"        # Find this in GCP Console → top of page
 REGION="europe-west2"                    # London region (closest to Oxford)
 SERVICE_NAME="cc-fraud-api"              # Name your Cloud Run service
 IMAGE_NAME="cc-fraud-api"               # Name for your Docker image
@@ -49,7 +49,7 @@ gcloud auth login
 
 # Set your project as the active project
 gcloud config set project $PROJECT_ID
-echo "✓ Authenticated and project set to: $PROJECT_ID"
+echo "Authenticated and project set to: $PROJECT_ID"
 
 
 # ── STEP 2: Enable required GCP APIs ─────────────────────────────────────────
@@ -61,7 +61,7 @@ gcloud services enable \
     artifactregistry.googleapis.com \  # stores your Docker images
     run.googleapis.com \               # runs your containers
     cloudbuild.googleapis.com          # builds images in the cloud (optional)
-echo "✓ APIs enabled"
+echo "APIs enabled"
 
 
 # ── STEP 3: Create Artifact Registry repository ───────────────────────────────
@@ -73,7 +73,7 @@ gcloud artifacts repositories create $REPO_NAME \
     --repository-format=docker \        # we're storing Docker images
     --location=$REGION \
     --description="CC Fraud Detection models"
-echo "✓ Repository created: $REPO_NAME"
+echo "Repository created: $REPO_NAME"
 
 
 # ── STEP 4: Configure Docker to authenticate with GCP ────────────────────────
@@ -82,7 +82,7 @@ echo "✓ Repository created: $REPO_NAME"
 echo ""
 echo "── Step 4: Configure Docker auth ──────────────────────────────────────"
 gcloud auth configure-docker ${REGION}-docker.pkg.dev
-echo "✓ Docker configured to authenticate with GCP"
+echo "Docker configured to authenticate with GCP"
 
 
 # ── STEP 5: Build Docker image locally ───────────────────────────────────────
@@ -103,7 +103,7 @@ echo ""
 echo "── Step 6: Push image to GCP ───────────────────────────────────────────"
 echo "Uploading image (~500MB, may take a few minutes)..."
 docker push ${IMAGE_PATH}:latest
-echo "✓ Image pushed to Artifact Registry"
+echo "Image pushed to Artifact Registry"
 
 
 # ── STEP 7: Deploy to Cloud Run ───────────────────────────────────────────────
@@ -126,7 +126,7 @@ gcloud run deploy $SERVICE_NAME \
     --max-instances=3              # cap at 3 instances to control costs
 
 echo ""
-echo "✅ Deployment complete!"
+echo "Deployment complete!"
 echo ""
 
 

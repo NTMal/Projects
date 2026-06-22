@@ -2,7 +2,8 @@
 
 A containerised REST API serving two fraud detection models trained on the Kaggle Credit Card Fraud dataset, deployed on GCP Cloud Run.
 
-**Live API:** `[your-service-url-here]` · **Interactive docs:** `[your-service-url-here]/docs`
+**Live API:** [https://cc-fraud-api-345832457280.europe-west2.run.app](https://cc-fraud-api-345832457280.europe-west2.run.app)
+**Interactive docs:** [https://cc-fraud-api-345832457280.europe-west2.run.app/docs](https://cc-fraud-api-345832457280.europe-west2.run.app/docs)
 
 ---
 
